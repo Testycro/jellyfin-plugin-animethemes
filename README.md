@@ -20,7 +20,7 @@ Also make sure to enable theme music / videos in your display settings.
 
 ### Manually
 
-1. [Grab the latest build.](https://github.com/EusthEnoptEron/jellyfin-plugin-animethemes/actions/workflows/build.yaml)
+1. [Grab the latest build.](https://github.com/Testycro/jellyfin-plugin-animethemes/actions/workflows/build.yaml)
 2. Download it into your plugins folder [as described here](https://jellyfin.org/docs/general/server/plugins/).
 
 ## Configuration
