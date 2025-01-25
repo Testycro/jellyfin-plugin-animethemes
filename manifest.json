@@ -8,6 +8,14 @@
         "owner": "EusthEnoptEron",
         "versions": [
             {
+                "checksum": "e20a3e4d43b1cca5e67397b1ec74c5a0",
+                "changelog": "Release attempt for latest Jellyfin version (10.10.0).",
+                "targetAbi": "10.10.0.0",
+                "sourceUrl": "https://github.com/Testycro/jellyfin-plugin-animethemes/releases/download/1.1.1b2/animethemes_1.1.1.1.zip",
+                "timestamp": "2025-01-26T00:20:00Z",
+                "version": "1.1.1.1"
+            },
+            {
                 "checksum": "706ea2acfc8b964755055aa444c7c9b3",
                 "changelog": "Release attempt for latest Jellyfin version (10.10.0).",
                 "targetAbi": "10.10.0.0",
