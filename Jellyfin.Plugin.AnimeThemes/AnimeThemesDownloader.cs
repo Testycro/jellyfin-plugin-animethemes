@@ -228,18 +228,21 @@ public class AnimeThemesDownloader : IDisposable
                 // Copy video stream
                 arguments.Add("-c:v");
                 arguments.Add("copy");
+                // Copy audio stream
+                arguments.Add("-c:a");
+                arguments.Add("copy");
             }
 
-            if (volume < 0.01 && type == MediaType.Video)
-            {
+//            if (volume < 0.01 && type == MediaType.Video)
+//            {
                 // Mute videos when volume is low enough
-                arguments.Add("-an");
-            }
-            else
-            {
-                arguments.Add("-filter:a");
-                arguments.Add($"volume={volume:0.00}");
-            }
+//                arguments.Add("-an");
+//            }
+//            else
+//            {
+//                arguments.Add("-filter:a");
+//                arguments.Add($"volume={volume:0.00}");
+//            }
 
             arguments.Add(path);
 
