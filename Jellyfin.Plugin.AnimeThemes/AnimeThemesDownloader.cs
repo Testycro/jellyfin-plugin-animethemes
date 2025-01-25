@@ -235,7 +235,7 @@ public class AnimeThemesDownloader : IDisposable
 
             if (volume < 0.01 && type == MediaType.Video)
             {
-                Mute videos when volume is low enough
+                // Mute videos when volume is low enough
                 arguments.Add("-an");
             }
             else
