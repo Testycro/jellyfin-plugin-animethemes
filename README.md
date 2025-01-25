@@ -15,7 +15,7 @@ Also make sure to enable theme music / videos in your display settings.
 ### Plugin Manager
 
 1. Add the following repository to your plugin repositories:
-   https://raw.githubusercontent.com/EusthEnoptEron/jellyfin-plugin-animethemes/main/manifest.json
+   https://raw.githubusercontent.com/Testycro/jellyfin-plugin-animethemes/main/manifest.json
 2. Find the plugin in the catalog and install it.
 
 ### Manually
