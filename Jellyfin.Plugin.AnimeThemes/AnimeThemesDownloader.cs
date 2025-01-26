@@ -240,7 +240,7 @@ public class AnimeThemesDownloader : IDisposable
             }
             else
             {
-                volume = volume.ToString("0.00", new CultureInfo("en-US", false));
+                volume.ToString("0.00", new CultureInfo("en-US", false));
                 arguments.Add("-filter:a");
                 arguments.Add($"\"volume={volume}\"");
             }
