@@ -23,7 +23,7 @@ public class PluginConfiguration : BasePluginConfiguration
             IgnoreThemesWithCredits = false,
             IgnoreOPs = false,
             IgnoreEDs = false,
-            Volume = 0.5,
+            Volume = 0.5F,
         };
 
         VideoSettings = new MediaTypeConfiguration()
@@ -33,7 +33,7 @@ public class PluginConfiguration : BasePluginConfiguration
             IgnoreThemesWithCredits = true,
             IgnoreOPs = false,
             IgnoreEDs = false,
-            Volume = 0.0,
+            Volume = 0.0F,
         };
     }
 
