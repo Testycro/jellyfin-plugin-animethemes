@@ -183,16 +183,15 @@ public class AnimeThemesDownloader : IDisposable
         }
     }
 
-
     private void CheckDirectory(BaseItem series, MediaType mediaType)
     {
         var directory = mediaType == MediaType.Audio ? ThemeMusicDirectory : ThemeVideoDirectory;
 
         var path = Path.Combine(series.Path, directory);
         if (!Directory.Exists(path))
-        {   
+        {
             Directory.CreateDirectory(path);
-            _logger.LogInformation("[{Id}] Creating directory {path}", series.Id, path);
+            _logger.LogInformation("[{Id}] Creating directory {Path}", series.Id, path);
         }
     }
 
