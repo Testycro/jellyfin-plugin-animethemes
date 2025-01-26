@@ -241,7 +241,7 @@ public class AnimeThemesDownloader : IDisposable
             else
             {
                 string vol = volume.ToString("F2", new CultureInfo("en-US", false));
-                vol = vol.Replace(".", ",");
+                vol = vol.Replace(",", ".", StringComparison.OrdinalIgnoreCase);
                 arguments.Add("-filter:a");
                 arguments.Add($"\"volume={vol}\"");
             }
