@@ -180,7 +180,7 @@ public class AnimeThemesDownloader : IDisposable
         }
     }
 
-    private async ValueTask Download(MediaType type, string url, BaseItem item, string relativePath, string volume = "1.0", CancellationToken cancellationToken = default)
+    private async ValueTask Download(MediaType type, string url, BaseItem item, string relativePath, double volume = 1.0, CancellationToken cancellationToken = default)
     {
         var path = Path.Combine(item.Path, relativePath);
         if (File.Exists(path))
@@ -240,6 +240,7 @@ public class AnimeThemesDownloader : IDisposable
             }
             else
             {
+                volume = volume.ToString("F2");
                 arguments.Add("-filter:a");
                 arguments.Add($"\"volume={volume:0.00}\"");
             }
