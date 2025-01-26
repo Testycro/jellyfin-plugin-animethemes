@@ -110,6 +110,9 @@ public class AnimeThemesDownloader : IDisposable
             CleanDirectory(item, type, links.Select(it => Path.GetFileName(it.Filepath)));
         }
 
+        // We create needed directories if not exists
+        CheckDirectory(item, type);
+
         foreach (var (url, relativePath) in links)
         {
             // Download if needed
@@ -177,6 +180,19 @@ public class AnimeThemesDownloader : IDisposable
                 _logger.LogInformation("[{Id}] Removing obsolete theme: {Theme}", series.Id, filepath);
                 File.Delete(filepath);
             }
+        }
+    }
+
+
+    private void CheckDirectory(BaseItem series, MediaType mediaType)
+    {
+        var directory = mediaType == MediaType.Audio ? ThemeMusicDirectory : ThemeVideoDirectory;
+
+        var path = Path.Combine(series.Path, directory);
+        if (!Directory.Exists(path))
+        {   
+            Directory.CreateDirectory(path);
+            _logger.LogInformation("[{Id}] Creating directory {path}", series.Id, path);
         }
     }
 
