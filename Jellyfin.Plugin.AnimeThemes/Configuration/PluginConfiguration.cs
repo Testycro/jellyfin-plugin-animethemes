@@ -112,5 +112,5 @@ public class MediaTypeConfiguration
     /// <summary>
     /// Gets or sets the volume setting.
     /// </summary>
-    public decimal Volume { get; set; }
+    public float Volume { get; set; }
 }
