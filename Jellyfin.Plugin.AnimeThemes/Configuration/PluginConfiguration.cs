@@ -23,7 +23,7 @@ public class PluginConfiguration : BasePluginConfiguration
             IgnoreThemesWithCredits = false,
             IgnoreOPs = false,
             IgnoreEDs = false,
-            Volume = 0.5F,
+            Volume = 0.5,
         };
 
         VideoSettings = new MediaTypeConfiguration()
@@ -33,7 +33,7 @@ public class PluginConfiguration : BasePluginConfiguration
             IgnoreThemesWithCredits = true,
             IgnoreOPs = false,
             IgnoreEDs = false,
-            Volume = 0.0F,
+            Volume = 0.0,
         };
     }
 
@@ -112,5 +112,5 @@ public class MediaTypeConfiguration
     /// <summary>
     /// Gets or sets the volume setting.
     /// </summary>
-    public float Volume { get; set; }
+    public double Volume { get; set; }
 }
