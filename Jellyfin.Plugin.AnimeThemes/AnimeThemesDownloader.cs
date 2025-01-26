@@ -240,8 +240,8 @@ public class AnimeThemesDownloader : IDisposable
             }
             else
             {
-                volume.ToString("F2", new CultureInfo("en-US", false));
-                var vol = volume.Replace(".", ",");
+                string vol = volume.ToString("F2", new CultureInfo("en-US", false));
+                vol.Replace(".", ",");
                 arguments.Add("-filter:a");
                 arguments.Add($"\"volume={vol}\"");
             }
@@ -252,7 +252,7 @@ public class AnimeThemesDownloader : IDisposable
             var memoryStream = new MemoryStream();
             await process.StandardOutput.BaseStream.CopyToAsync(memoryStream, cancellationToken).ConfigureAwait(false);
 
-            _logger.LogInformation("[{Id}] Successfully downloaded theme song! [volume {vol}]", item.Id);
+            _logger.LogInformation("[{Id}] Successfully downloaded theme song!", item.Id);
         }
         catch (Exception e)
         {
